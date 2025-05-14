@@ -1,4 +1,4 @@
-from app.logica_sistema import cadastrar_aluno, listar_alunos
+from app.logica_sistema import cadastrar_aluno, listar_alunos, detalahr_aluno
 
 comando = ""
 
@@ -6,6 +6,9 @@ while comando !="sair":
       comando = input(f"Escolha uma opção: \n"
                       f"1) Cadastrar Aluno \n"
                       f"2) Listar Alunos \n"
+                      f"3) Detalhar Alunos \n"
+                      f"4) Deletar Alunos \n"                   
+                      
                       f"Digite 'sair para sair do sistema \n")
 
 #CADASTRA ALUNOS
@@ -22,4 +25,17 @@ while comando !="sair":
             print(listar_alunos())
 
           case "3":
+              matricula = input("Informe a matricula do aluno")
+
+
+              print(detalahr_aluno(matricula))
+
+          case "4":
+              matricula = input("Informe a matricula do aluno")
+
+              print(deletar_aluno(matricula))
+
+
+
+          case "sair"
               print("Saindo do Sistema.")
